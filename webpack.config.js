@@ -34,6 +34,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 //минифицирует жс код
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+//инициализируем ЕСЛинт
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     //указываем контекст - где исходники с которыми вебпак должен поколдовать
@@ -48,8 +50,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     //позволяет делать так что раньше пусть указываем так ./src/index.js, но раз я указал ниже .js тогда я могу путь указывать теперь вот так ./src/index, правда не понятно как конфликт имен решаться будет
+    //*добавил расширение для реакта
     resolve: {
-        extensions: ['.js','.css','.scss']
+        extensions: ['.js','.css','.scss', '.jsx']
     },
     //как и написано - оптимизация, важно что оптимизация/минификация только в продакшене, ну и укажи плагины для минификаций
     optimization: {
@@ -66,8 +69,9 @@ module.exports = {
             //кроме папки нод модульс
             //и для обработки юзать лодер бабел-лодер
             //*Важно что еще нужен .babelrc где мы объявляем плагины и пресеты бабела чтоб все работало корректно
+            //*Добавил расширеямость на jsx
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -97,7 +101,9 @@ module.exports = {
             }
         }),
         //плагин который пересоздает сисс
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        //Линтер
+        new ESLintPlugin()
     ],
     /*
     Позволяет делать так что при сборке, если ошибка в коде, без этой настройки будет main.js строка 9, но если мы перейдем там просто будет
