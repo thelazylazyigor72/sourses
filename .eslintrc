@@ -5,6 +5,6 @@
 //предепс означает некие неободимые но не напрямую дев зависимости, 
 //extends:airbnb мы говорим нашей конфигурации использовать правила airbnb
 {
-    "parser": "@babel/eslint-parser"
-    //"extends": ["airbnb"]
+    "parser": "@babel/eslint-parser",
+    "extends": ["airbnb"]
 }

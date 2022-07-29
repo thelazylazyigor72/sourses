@@ -100,7 +100,7 @@ module.exports = {
                 collapseWhitespace: modeReverse
             }
         }),
-        //плагин который пересоздает сисс
+        //плагин который пересоздает scss
         new MiniCssExtractPlugin(),
         //Линтер
         new ESLintPlugin()

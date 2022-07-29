@@ -1,7 +1,7 @@
 {
-  "name": "01-birthday-reminder",
+  "name": "webpack",
   "version": "1.0.0",
-  "description": "learning react project + first time setting webpack for react",
+  "description": "setup",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development --open",

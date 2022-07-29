@@ -3,7 +3,7 @@
 
 - Prefix Mixin
 - Useful Mixins
-- Add here responsive sass file
+
 <br>
 
 # Webpack
