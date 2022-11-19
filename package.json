@@ -1,5 +1,5 @@
 {
-  "name": "filteredmenu",
+  "name": "navigationbar",
   "version": "1.0.0",
   "description": "setup",
   "main": "index.js",
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
+    "@svgr/webpack": "^6.5.1",
     "babel-preset-minify": "^0.5.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
@@ -46,6 +47,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "tar": "^6.1.11"
+    "tar": "^6.1.11",
+    "values.js": "^2.1.1"
   }
 }
