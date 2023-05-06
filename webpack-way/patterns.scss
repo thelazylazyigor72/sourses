@@ -30,3 +30,28 @@
     justify-content: $jc;
     align-items: $ai;
 }
+
+//obvious
+@mixin containerSettings(
+	$ps: false,
+	$w: false,
+	$h: false,
+	$maxw: false,
+	$maxh: false
+) {
+	@if $ps {
+		position: $ps;
+	}
+	@if $w {
+		width: $w;
+	}
+	@if $h {
+		height: $h;
+	}
+	@if $maxw {
+		max-width: $maxw;
+	}
+	@if $maxh {
+		max-height: $maxh;
+	}
+}

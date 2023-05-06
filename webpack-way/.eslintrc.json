@@ -22,7 +22,11 @@
         "prettier"
     ],
     "rules": {
-        "max-len": "warn",
-        "react/function-component-definition": "off"
+		"react/function-component-definition": "off",
+		"spaced-comment": "off",
+		"react/prop-types": "off",
+		"react/destructuring-assignment": "off",
+		"react/no-array-index-key": "warn",
+		"no-unused-vars": "warn"
     }
 }
